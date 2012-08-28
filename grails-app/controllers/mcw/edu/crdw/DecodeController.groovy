@@ -6,6 +6,10 @@ import grails.converters.XML;
 
 class DecodeController {
     static scaffold = Decode
+    def serviceList = {
+     return    
+    
+    }
     
     def save = {
         if ( params.message != null ) { 
@@ -14,9 +18,9 @@ class DecodeController {
             int bufferSize = messageToDecode.length() * 4 
             String configurationFileContents = servletContext.configurationFileContents
             JniDeID deid = servletContext.deid
-            println "CONFIG" <<    configurationFileContents;
+            //println "CONFIG" <<    configurationFileContents;
             String deIdString = deid.createStringDeidentifier(messageToDecode, configurationFileContents, bufferSize);
-            println "deIdString" <<    deIdString;
+            //println "deIdString" <<    deIdString;
             render "<HML>Your DeIdentified message:<br><pre>" << deIdString ;
         } else { 
             return "No Message to De-Identify"
@@ -33,9 +37,9 @@ class DecodeController {
             int bufferSize = messageToDecode.length() * 4 
             String configurationFileContents = servletContext.configurationFileContents
             JniDeID deid = servletContext.deid
-            println "CONFIG" <<    configurationFileContents;
+            //println "CONFIG" <<    configurationFileContents;
             String deIdString = deid.createStringDeidentifier(messageToDecode, configurationFileContents, bufferSize);
-            println "deIdString" <<    deIdString;
+            //println "deIdString" <<    deIdString;
             dec.message = deIdString
             render dec as JSON;
         } else { 
@@ -52,9 +56,9 @@ class DecodeController {
             int bufferSize = messageToDecode.length() * 4 
             String configurationFileContents = servletContext.configurationFileContents
             JniDeID deid = servletContext.deid
-            println "CONFIG" <<    configurationFileContents;
+            //println "CONFIG" <<    configurationFileContents;
             String deIdString = deid.createStringDeidentifier(messageToDecode, configurationFileContents, bufferSize);
-            println "deIdString" <<    deIdString;
+            //println "deIdString" <<    deIdString;
             dec.message = deIdString
             render dec as XML;
         } else { 
@@ -71,7 +75,7 @@ class DecodeController {
             retString += "2|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n";
             retString += "E_O_H\n";
             retString += notes + "\nE_O_R";
-            System.out.println retString
+            //System.out.println retString
             return retString;
         } else {
             return null;
