@@ -28,6 +28,11 @@ Set the Java CLASSPATH System Variable to :
  CLASSPATH=C:\Progra~1;.;
 
 
+Testing
+=======
+$ curl -F "message=George Kowalski" http://server:8080/DeIdentApp/decode/decodeAsJSON/
+{"class":"mcw.edu.crdw.domain.Decode","id":null,"message":"**NAME[ZZZ YYY]\n\n"}[crdw@forester:~/CRDW/trunk/src/deIDPipeline]$ 
+
 Servers in this process 
 ======
 

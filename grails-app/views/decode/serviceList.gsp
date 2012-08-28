@@ -38,7 +38,13 @@
     One can call this same url /DeIdentApp/decodeXML/ and POST more data that a 
     GET supports . In this case specify the parameter "message" with the data to be decoded. 
       <br>&nbsp;<br>
-         
+      <h3>Testing</h3>
+      Testing can be done via the UNIX command line with curl: <br><br>
+      <pre>
+      $ curl -F "message=George Kowalski" http://server/DeIdentApp/decode/decodeAsJSON/
+      Results in : 
+        {"class":"mcw.edu.crdw.domain.Decode","id":null,"message":"**NAME[ZZZ YYY]\n\n"} 
+  </pre>
      <h3>Security</h3>
     This application performs no security checking as it never stores or logs any HIPAA data. 
     All de-identification is performed in memory via a Secure (HTTPS) connection.<br>
