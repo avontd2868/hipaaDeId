@@ -4,7 +4,7 @@ class UrlMappings {
  
         "/decodeMessage/$message"(controller: "decode") {
             action = [GET: "decodeAsJSON", POST: "decodeAsJSON"]
-        }
+        } 
         "/decodeJSON/$message"(controller: "decode") {
             action = [GET: "decodeAsJSON", POST: "decodeAsJSON"]
         }
