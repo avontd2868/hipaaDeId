@@ -41,7 +41,10 @@
          
      <h3>Security</h3>
     This application performs no security checking as it never stores or logs any HIPAA data. 
-    All de-identification is performed in memory via a Secure (HTTPS) connection. 
+    All de-identification is performed in memory via a Secure (HTTPS) connection.<br>
+    The only logging may be in the apache log if you use that to front end this Grails app. 
+    In that case you should not use GET , but instead POST only for de-identification requests. 
+    
   </div>
 </body>
 </html>
