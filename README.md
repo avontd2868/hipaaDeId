@@ -8,15 +8,25 @@ Requirements
 
 - Needs to run on a windows machine as it uses JNI to talk to a C++ library
 - Project built with Netbeans IDE
-- Assumes the de-idata software has already been installed and configured. 
+- Assumes the de-idata software has already been installed and configured. Install
+  it to the C:\Program Files\DeID directory for the rest of this configuration 
+  to work. 
 - Uses grails 1.3.7 
 
 Configuration to run from the command line and within the IDE:
 ======
 
-set the global PATH= 
 
-set the CLASSPATH=
+Prepend the System PATH as : 
+
+ PATH= C:\Progra~1\DeID;%PATH%
+
+Make sure it goes first ! 
+
+Set the Java CLASSPATH System Variable to : 
+
+ CLASSPATH=C:\Progra~1;.;
+
 
 Servers in this process 
 ======
