@@ -2,6 +2,9 @@ This Grails Web Application wraps the DeIdent software from the de-idata.com Cor
 ======
 
 - This software will be used to de-identify text fields within the CRDW project. 
+- Please note you need to purchase the de-idata software from de-idata.com and this
+  software was not developed , nor supported by them. Use this software at your own
+  risk. Thsi software  
 
 Requirements
 ======
@@ -75,3 +78,20 @@ History
     to DEIDENT database was going to be too slow. Thus this web application was 
     created to provide JSON / XML services to do this . No Security for this app 
     as this no data is stored or logged by this application. 
+
+Copyright
+=========
+
+Copyright [2012] [George B Kowalski]
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
