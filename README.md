@@ -35,11 +35,29 @@ git clone https://github.com/gkowalski/hipaaDeId.git
 Follow the Next section on Configuration to modify / add 2 *System* Environment 
 variables. 
 
-Finally one can run the app with: 
-- grails run-app to run with internal server on port 8080
+Next modify the ~project/grails-app/conf/Bootstrap.groovy file 
+
+Modify the line to point to your deid.cfg file with the options you prefer : 
+
+       String configurationFileContents = readFileAsString("PATH_TO_YOUR_deid.cfg");
+
+Note that you must have the option turned off for header and footer output no matter what other options you choose : 
+
+[Output Options]
+PrintHeaderFooter=0
+
+an example is provided at the root of this project. 
+
+Now cd to the project directory and run the app with the command: 
+
+       grails run-app 
+
+to run with internal server on port 8080
 
 Or to run in a web application server like tomcat or glassfish
-- grails prod war
+
+       grails prod war
+
 - copy the ~project/prod.war to the deploy directory or your web application.
 
     

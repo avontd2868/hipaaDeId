@@ -8,7 +8,7 @@ class BootStrap {
         JniDeID.loadDeidLibrary();
         deid.setDictionaryLocation("C:/progra~1/DeID");
            
-        String configurationFileContents = readFileAsString("C:/progra~1/DeID/deid.cfg");
+        String configurationFileContents = readFileAsString("C:/Users/George Kowalski/Documents/NetBeansProjects/DeIdentApp/deid.cfg");
         //String deIdString = deid.createStringDeidentifier(report, configurationFileContents, bufferSize);
         servletContext.setAttribute("configurationFileContents", configurationFileContents) 
         servletContext.setAttribute("deid", deid) 
