@@ -1,8 +1,8 @@
-This Grails Web Application wraps the DeIdent software from the de-idata.com Corporation
+This Grails Web Application wraps the De-ID software from the de-idata.com Corporation
 ======
 
 - This software provides a test screen and REST web services to the de-idata software. 
-- Please note you need to purchase the de-idata software from de-idata.com and this
+- Please note you need to purchase the DE-ID software from de-idata.com and this
   application sits on top of their software was not developed , nor is supported by them. 
   I have no association with them and only provide this software as an example of 
   how to interface to their software. See the copyright at the bottom of this page. 
@@ -12,7 +12,7 @@ Requirements
 
 - Needs to run on a windows machine as it uses JNI to talk to a C++ library
 - Project built with Netbeans IDE
-- Assumes the de-idata software has already been installed and configured. Install
+- Assumes the DE-ID software has already been installed and configured. Install
   it to the C:\Program Files\DeID directory for the rest of this configuration 
   to work. 
 - Uses grails 1.3.7 
@@ -30,23 +30,22 @@ Install the following on the PC :
 
 Download the source from github
 
-git clone https://github.com/gkowalski/hipaaDeId.git
+       git clone https://github.com/gkowalski/hipaaDeId.git
 
 Follow the Next section on Configuration to modify / add 2 *System* Environment 
 variables. 
 
-Next modify the ~project/grails-app/conf/Bootstrap.groovy file 
-
-Modify the line to point to your deid.cfg file with the options you prefer : 
+Next modify the ~project/grails-app/conf/Bootstrap.groovy file changing the following 
+line to point to your deid.cfg file with the options you prefer : 
 
        String configurationFileContents = readFileAsString("PATH_TO_YOUR_deid.cfg");
 
 Note that you must have the option turned off for header and footer output no matter what other options you choose : 
 
-[Output Options]
-PrintHeaderFooter=0
+       [Output Options]
+       PrintHeaderFooter=0
 
-an example is provided at the root of this project. 
+an example of this file is provided at the root of this project. 
 
 Now cd to the project directory and run the app with the command: 
 
