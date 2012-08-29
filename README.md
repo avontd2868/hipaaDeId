@@ -1,10 +1,11 @@
 This Grails Web Application wraps the DeIdent software from the de-idata.com Corporation
 ======
 
-- This software will be used to de-identify text fields within the CRDW project. 
+- This software provides a test screen and REST web services to the de-idata software. 
 - Please note you need to purchase the de-idata software from de-idata.com and this
-  software was not developed , nor supported by them. Use this software at your own
-  risk. Thsi software  
+  application sits on top of their software was not developed , nor is supported by them. 
+  I have no association with them and only provide this software as an example of 
+  how to interface to their software. See the copyright at the bottom of this page. 
 
 Requirements
 ======
@@ -48,13 +49,13 @@ Configuration needed to the PC running the de-ident software
 
 Prepend the System PATH as : 
 
- PATH= C:\Progra~1\DeID;%PATH%
+       PATH=C:\Progra~1\DeID;%PATH%
 
 Make sure it goes first ! 
 
 Set the Java CLASSPATH System Variable to : 
 
- CLASSPATH=C:\Progra~1;.;
+       CLASSPATH=C:\Progra~1;.;
 
 
 Testing
@@ -69,7 +70,6 @@ Should Return:
 {"class":"mcw.edu.crdw.domain.Decode","id":null,"message":"**NAME[ZZZ YYY]\n\n"} 
 
 
-
 History
 ======
 
@@ -82,7 +82,7 @@ History
 Copyright
 =========
 
-Copyright [2012] [George B Kowalski]
+Copyright 2012 George B Kowalski
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
